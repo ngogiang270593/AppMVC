@@ -1,0 +1,23 @@
+﻿@model ProductModel
+@{
+    //ViewData["Title"] = "Study View";
+}
+@if(Model != null){
+    <div class="card" style="width: 320px;">
+        <img class="card-img-top" 
+            src="https://www.gettyimages.in/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg" alt="">
+
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text">Giá : <span>@Model.Price</span></p>
+            <a asp-action="Index" class="btn btn-primary">Trờ về</a>
+        </div>
+        
+    </div>
+}
+else{
+    <div class="alert alert-danger" role="alert">
+        Không có sản phẩm
+    </div>
+}
+
